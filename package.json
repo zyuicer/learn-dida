@@ -4,10 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "lint": "pnpm -F frontend lint",
-    "build": "vue-tsc && vite build",
-    "preview": "vite preview"
+    "dev:fe": "pnpm -F frontend dev",
+    "lint": "pnpm -F frontend lint"
   },
   "dependencies": {
     "vue": "^3.2.45"

@@ -1,14 +1,11 @@
 <script setup lang="ts">
-import { NConfigProvider } from "naive-ui";
-import { useDark, useToggle } from "@vueuse/core";
-import LayOut from "@/layout/Layout.vue";
-const isDark = useDark();
-console.log(isDark);
-
-console.log();
+import { NConfigProvider } from 'naive-ui'
+import LayOut from '@/layout/Layout.vue'
+import { getGlobalThemeStore } from '@/store'
+const themeStore = getGlobalThemeStore()
 </script>
 <template>
-  <NConfigProvider>
+  <NConfigProvider :theme="themeStore.naiveTheme">
     <LayOut>
       <RouterView />
     </LayOut>
